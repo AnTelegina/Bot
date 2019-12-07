@@ -13,7 +13,7 @@ class Chat {
 
     {
         try {
-            dictionary = reader.makeDictionaryOfWords("C:\\Users\\nasty\\just_project\\src\\com\\dict.txt", " ");
+            dictionary = reader.makeDictionaryOfWords("C:\\Users\\nasty\\just_project\\src\\com\\dict\\dict.txt", " ");
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -21,7 +21,7 @@ class Chat {
 
     {
         try {
-            arrOfWords = reader.getArrayOfWords("C:\\Users\\nasty\\just_project\\src\\com\\dict.txt", " ");
+            arrOfWords = reader.getArrayOfWords("C:\\Users\\nasty\\just_project\\src\\com\\dict\\dict.txt", " ");
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -29,7 +29,7 @@ class Chat {
 
     {
         try {
-            phrases = reader.makeListsOfPhrases("C:\\Users\\nasty\\just_project\\src\\com\\phrases.txt");
+            phrases = reader.makeListsOfPhrases("C:\\Users\\nasty\\just_project\\src\\com\\dict\\phrases.txt");
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -37,7 +37,7 @@ class Chat {
 
     {
         try {
-            answers = reader.makeListsOfPhrases("C:\\Users\\nasty\\just_project\\src\\com\\answers.txt");
+            answers = reader.makeListsOfPhrases("C:\\Users\\nasty\\just_project\\src\\com\\dict\\answers.txt");
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -45,7 +45,7 @@ class Chat {
 
     {
         try {
-            patterns = reader.makeDictionaryOfWords("C:\\Users\\nasty\\just_project\\src\\com\\patterns.txt", ":");
+            patterns = reader.makeDictionaryOfWords("C:\\Users\\nasty\\just_project\\src\\com\\dict\\patterns.txt", ":");
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -53,7 +53,7 @@ class Chat {
 
     {
         try {
-            answers_by_patterns = reader.makeDictionaryOfWords("C:\\Users\\nasty\\just_project\\src\\com\\answers_by_pattr.txt", ":");
+            answers_by_patterns = reader.makeDictionaryOfWords("C:\\Users\\nasty\\just_project\\src\\com\\dict\\answers_by_pattr.txt", ":");
         } catch (Exception e) {
             e.printStackTrace();
         }
