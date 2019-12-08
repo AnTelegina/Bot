@@ -16,6 +16,11 @@ class Game {
             String word = arrOfWords.get(i);  //на каждой итерации выводим последовательно слова из списка
             System.out.println(word);
             answer = str.nextLine(); // читаем ответ от пользователя
+
+            if (answer.toLowerCase().equals("\\help")) {
+                System.out.println("stop: to quit the game");
+            }
+
             if (answer.toLowerCase().equals("stop") || answer.toLowerCase().equals("finish")) break;
 
             if (answer.toLowerCase().equals(dictionary.get(word))) { //проверяем корректость ответа, если все правильно, то score++

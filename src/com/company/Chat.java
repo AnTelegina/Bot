@@ -65,6 +65,7 @@ class Chat {
     void chat(){
         String answer;
         ChatBot bot = new ChatBot();
+
         System.out.println("Hello! I'm simple Chat-Bot for studying English! If you'd like to test you English vocabulary, write 'play'. " +
                 "If you'd like better to ask me smth, write 'speak'. " +
                 "If you'd want to quit, write 'stop'.");
@@ -77,12 +78,15 @@ class Chat {
                         "speak: to speak or ask about smth" + "\n" +
                         "stop: to quit the game" + "\n");
             }
-            if (answer.toLowerCase().equals("play"))
+            if (answer.toLowerCase().equals("play")){
                 bot.playGame(dictionary, arrOfWords);
+                System.out.println("What now?");
+            }
 
             if (answer.toLowerCase().equals("speak")) {
                 System.out.println("Pls write me smth!");
                 bot.speak(phrases, answers, patterns, answers_by_patterns);
+                System.out.println("What now?");
             }
 
             if (answer.toLowerCase().equals("stop")) break;
