@@ -7,4 +7,6 @@ public interface BotInterface {
 
      void speak(HashMap<Integer, String> phrases, HashMap<Integer, String> answers,
               HashMap<String, String> patterns, HashMap<String, String> answers_by_patterns);
+
+     void show_statistics(String user_name);
 }

@@ -12,4 +12,9 @@ class ChatBot implements BotInterface {
     public void speak(HashMap<Integer, String> phrases, HashMap<Integer, String> answers, HashMap<String, String> patterns, HashMap<String, String> answers_by_patterns) {
         Speech.speak(phrases,answers,patterns,answers_by_patterns);
     }
+
+    @Override
+    public void show_statistics(String user_name) {
+        Game.show_statistics(user_name);
+    }
 }

@@ -64,11 +64,11 @@ class Chat {
 
     void chat(){
         String answer;
+        String user_name;
         ChatBot bot = new ChatBot();
 
-        System.out.println("Hello! I'm simple Chat-Bot for studying English! If you'd like to test you English vocabulary, write 'play'. " +
-                "If you'd like better to ask me smth, write 'speak'. " +
-                "If you'd want to quit, write 'stop'.");
+        System.out.println("Hello! I'm simple Chat-Bot for studying English! Tell me please you user_name.");
+        user_name = str.nextLine();
 
         while (true){
             answer = str.nextLine();
@@ -76,11 +76,17 @@ class Chat {
             if (answer.toLowerCase().equals("\\help")) {
                 System.out.println("play: to test you vovabulary" + "\n" +
                         "speak: to speak or ask about smth" + "\n" +
-                        "stop: to quit the game" + "\n");
+                        "stop: to quit the game" + "\n" +
+                        "show stat: to show your personal progress in Learning");
             }
+
             if (answer.toLowerCase().equals("play")){
                 bot.playGame(dictionary, arrOfWords);
                 System.out.println("What now?");
+            }
+
+            if (answer.toLowerCase().equals("show stat")) {
+                bot.show_statistics(user_name);
             }
 
             if (answer.toLowerCase().equals("speak")) {

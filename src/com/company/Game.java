@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Scanner;
 
 class Game {
-    private static int score;
+    private static int score = 0;
     private static Scanner str = new Scanner(System.in);
 
     static void playGame(HashMap<String, String> dictionary, HashMap<Integer, String> arrOfWords){
@@ -30,5 +30,9 @@ class Game {
             else System.out.println("Incorrect!");
         }
         System.out.println("Your score is: " + score + " from " + count); //выводим количество правильных ответов
+    }
+
+    static void show_statistics(String user_name){
+        System.out.println(user_name + " " + score);
     }
 }
