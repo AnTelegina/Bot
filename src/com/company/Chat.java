@@ -1,5 +1,7 @@
 package com.company;
 
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.HashMap;
 import java.util.Scanner;
 
@@ -31,7 +33,7 @@ class Chat {
 
     {
         try {
-            phrases = reader.makeListsOfPhrases("C:\\Users\\nasty\\just_project\\src\\com\\dict\\phrases.txt");
+            phrases = reader.makeList("C:\\Users\\nasty\\just_project\\src\\com\\dict\\phrases.txt");
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -39,7 +41,7 @@ class Chat {
 
     {
         try {
-            answers = reader.makeListsOfPhrases("C:\\Users\\nasty\\just_project\\src\\com\\dict\\answers.txt");
+            answers = reader.makeList("C:\\Users\\nasty\\just_project\\src\\com\\dict\\answers.txt");
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -67,8 +69,10 @@ class Chat {
         String user_name;
         ChatBot bot = new ChatBot();
 
-        System.out.println("Hello! I'm simple Chat-Bot for studying English! Tell me please you user_name.");
+        System.out.println("Hello! I'm simple Chat-Bot for studying English! Tell me please you user name.");
         user_name = str.nextLine();
+        User user = new User();
+        user.check_user(user_name);
 
         while (true){
             answer = str.nextLine();

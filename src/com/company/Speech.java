@@ -9,6 +9,9 @@ import java.util.regex.Pattern;
 class Speech {
     private static Scanner str = new Scanner(System.in);
     private static boolean match;
+    public Speech(){
+        match = false;
+    }
 
     static void speak(HashMap<Integer, String> phrases, HashMap<Integer, String> answers,
                        HashMap<String, String> patterns, HashMap<String, String> answers_by_patterns){
@@ -17,7 +20,6 @@ class Speech {
         while (true) {
             String answer;
             answer = str.nextLine();
-            match = false;
 
             if (answer.toLowerCase().equals("\\help")) {  // command "help"
                 System.out.println("stop: to finish the conversation");

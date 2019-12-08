@@ -21,7 +21,7 @@ class Read implements Readable {
     }
 
     @Override
-    public HashMap<Integer, String> makeListsOfPhrases(String fileName) throws Exception {
+    public HashMap<Integer, String> makeList(String fileName) throws Exception {
         HashMap<Integer, String> dict = new HashMap<>();
         FileReader fr = new FileReader(fileName);
         Scanner scan = new Scanner(fr);
