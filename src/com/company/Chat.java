@@ -69,10 +69,12 @@ class Chat {
         String user_name;
         ChatBot bot = new ChatBot();
 
-        System.out.println("Hello! I'm simple Chat-Bot for studying English! Tell me please you user name.");
+        System.out.println("Hello! I'm simple Chat-Bot for studying English! Tell me please you user name: ");
         user_name = str.nextLine();
-        User user = new User();
-        user.check_user(user_name);
+        User user = new User(user_name);
+        user.check_user();
+        if (user.name_is_already_existing())
+            user_name = user.continue_or_choose_another_name();
 
         while (true){
             answer = str.nextLine();
