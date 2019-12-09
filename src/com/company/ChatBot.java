@@ -4,8 +4,8 @@ import java.util.HashMap;
 
 class ChatBot implements BotInterface {
     @Override
-    public void playGame(HashMap<String, String> dictionary, HashMap<Integer, String> arrOfWords) {
-        Game.playGame(dictionary, arrOfWords);
+    public void playGame(HashMap<String, String> dictionary, HashMap<Integer, String> arrOfWords, String user_name) {
+        Game.playGame(dictionary, arrOfWords, user_name);
     }
 
     @Override

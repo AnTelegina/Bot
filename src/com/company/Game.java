@@ -7,8 +7,10 @@ class Game {
     private static int score = 0;
     private static Scanner str = new Scanner(System.in);
 
-    static void playGame(HashMap<String, String> dictionary, HashMap<Integer, String> arrOfWords){
+    static void playGame(HashMap<String, String> dictionary, HashMap<Integer, String> arrOfWords, String user_name){
         String answer;
+        User user = new User(user_name);
+
         int count = arrOfWords.size(); //размер словаря, по которому проверяем слова
 
         for (int i = 0; i < count; i++) {
@@ -30,6 +32,7 @@ class Game {
             else System.out.println("Incorrect!");
         }
         System.out.println("Your score is: " + score + " from " + count); //выводим количество правильных ответов
+        user.write_in_file(user_name, score);
     }
 
     static void show_statistics(String user_name){

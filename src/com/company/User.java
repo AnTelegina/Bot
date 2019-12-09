@@ -1,20 +1,23 @@
 package com.company;
 
+import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Scanner;
 
 class User {
     private String user_name;
     private HashMap<Integer, String> user_names = null;
-    private Readable reader = new Read();
     private static Scanner str = new Scanner(System.in);
     private static String answer;
 
     User(String user_name){
         this.user_name = user_name;
         try { //читаем файл в словарь
+            Readable reader = new Read();
             user_names = reader.makeList("C:\\Users\\nasty\\just_project\\src\\com\\stat\\user_names.txt");
         } catch (Exception e) {
             e.printStackTrace();
@@ -32,6 +35,7 @@ class User {
             catch(IOException ex){
                 System.out.println(ex.getMessage());
             }
+            make_file_for_user(user_name);
         }
 
         if (!user_names.containsValue(user_name) && !user_names.isEmpty()){ //если словарь не пуст, но не содержит имя пользователя, то дописываем в файл его имя
@@ -43,6 +47,7 @@ class User {
             catch(IOException ex){
                 System.out.println(ex.getMessage());
             }
+            make_file_for_user(user_name);
         }
     }
 
@@ -66,5 +71,29 @@ class User {
         System.out.println("New name has been created.");
         check_user();
         return user_name;
+    }
+
+    private void make_file_for_user(String user_name){
+        File newFile = new File("C:\\Users\\nasty\\just_project\\src\\com\\stat\\" + user_name + ".txt");
+        try
+        {
+            newFile.createNewFile();
+        }
+        catch(IOException ex){
+            ex.printStackTrace();
+        }
+    }
+
+    void write_in_file(String user_name, Integer score){
+        String date = new SimpleDateFormat("dd.MM.yyyy").format(new Date());
+
+        try(FileWriter writer = new FileWriter("C:\\Users\\nasty\\just_project\\src\\com\\stat\\" + user_name + ".txt", true))
+        {
+            writer.write(date + " " + score + "\n");
+            writer.flush();
+        }
+        catch(IOException ex){
+            System.out.println(ex.getMessage());
+        }
     }
 }

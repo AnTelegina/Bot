@@ -1,7 +1,7 @@
 package com.company;
 
-import java.io.FileWriter;
-import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Scanner;
 
@@ -76,18 +76,19 @@ class Chat {
         if (user.name_is_already_existing())
             user_name = user.continue_or_choose_another_name();
 
+
         while (true){
             answer = str.nextLine();
 
             if (answer.toLowerCase().equals("\\help")) {
-                System.out.println("play: to test you vovabulary" + "\n" +
+                System.out.println("play: to test you vocabulary" + "\n" +
                         "speak: to speak or ask about smth" + "\n" +
                         "stop: to quit the game" + "\n" +
                         "show stat: to show your personal progress in Learning");
             }
 
             if (answer.toLowerCase().equals("play")){
-                bot.playGame(dictionary, arrOfWords);
+                bot.playGame(dictionary, arrOfWords, user_name);
                 System.out.println("What now?");
             }
 
