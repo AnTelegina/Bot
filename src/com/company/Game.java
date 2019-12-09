@@ -36,6 +36,7 @@ class Game {
     }
 
     static void show_statistics(String user_name){
-        System.out.println(user_name + " " + score);
+        User user = new User(user_name);
+        user.read_from_file(user_name);
     }
 }

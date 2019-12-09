@@ -1,8 +1,6 @@
 package com.company;
 
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.*;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.HashMap;
@@ -94,6 +92,20 @@ class User {
         }
         catch(IOException ex){
             System.out.println(ex.getMessage());
+        }
+    }
+
+    void read_from_file(String user_name){
+        FileReader fr = null;
+        try {
+            fr = new FileReader("C:\\Users\\nasty\\just_project\\src\\com\\stat\\" + user_name + ".txt");
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+        Scanner scan = new Scanner(fr);
+
+        while (scan.hasNextLine()){
+            System.out.println(scan.nextLine());
         }
     }
 }
