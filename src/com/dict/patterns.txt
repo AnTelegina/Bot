@@ -1,6 +1,6 @@
 hello:greet
 day:greet
-\shi:greet
+ hi:greet
 hey:greet
 who\s.*you:who
 you\s.*who:who

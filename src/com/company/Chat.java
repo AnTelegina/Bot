@@ -76,6 +76,7 @@ class Chat {
         if (user.name_is_already_existing())
             user_name = user.continue_or_choose_another_name();
 
+        System.out.println("Now we are ready to start! White \\help, if you need it.");
 
         while (true){
             answer = str.nextLine();
