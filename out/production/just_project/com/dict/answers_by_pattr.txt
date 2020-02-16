@@ -1,7 +1,0 @@
-greet:Hello, it's very nice to meet you.
-who:I'm simple Chat-Bot. I'd like to help you improve your English skills.
-name:You can call me Chatter ^^
-howareyou:I'm fine, thank you. And you?
-posAdj:That's awesome!
-do:I'm here to teach you some new English vocabulary.
-agreement:So, look, that's a very interesting subject to talk about.
