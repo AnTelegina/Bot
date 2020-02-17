@@ -79,29 +79,31 @@ class Chat {
         System.out.println("Now we are ready to start! White \\help, if you need it.");
 
         while (true){
-            answer = str.nextLine();
+            answer = str.nextLine().toLowerCase();
 
-            if (answer.toLowerCase().equals("\\help")) {
-                System.out.println("play: to test you vocabulary" + "\n" +
-                        "speak: to speak or ask about smth" + "\n" +
-                        "stop: to quit the game" + "\n" +
-                        "show stat: to show your personal progress in Learning");
-            }
+           switch (answer){
+               case "\\help":
+                   System.out.println("play: to test you vocabulary" + "\n" +
+                           "speak: to speak or ask about smth" + "\n" +
+                           "stop: to quit the game" + "\n" +
+                           "show stat: to show your personal progress in Learning");
+                   break;
 
-            if (answer.toLowerCase().equals("play")){
-                bot.playGame(dictionary, arrOfWords, user_name);
-                System.out.println("What now?");
-            }
+               case "show stat":
+                   bot.show_statistics(user_name);
+                   break;
 
-            if (answer.toLowerCase().equals("show stat")) {
-                bot.show_statistics(user_name);
-            }
+               case "speak":
+                   System.out.println("Pls write me smth!");
+                   bot.speak(phrases, answers, patterns, answers_by_patterns);
+                   System.out.println("What now?");
+                   break;
 
-            if (answer.toLowerCase().equals("speak")) {
-                System.out.println("Pls write me smth!");
-                bot.speak(phrases, answers, patterns, answers_by_patterns);
-                System.out.println("What now?");
-            }
+               case "play":
+                   bot.playGame(dictionary, arrOfWords, user_name);
+                   System.out.println("What now?");
+                   break;
+           }
 
             if (answer.toLowerCase().equals("stop")) break;
         }
