@@ -1,4 +1,4 @@
 .idea/
 out/
 just_project.iml
-jsoup-1.12.2.jar
+src/jsoup-1.12.2.jar
