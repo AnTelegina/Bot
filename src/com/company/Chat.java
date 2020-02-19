@@ -103,6 +103,7 @@ class Chat {
                    bot.playGame(dictionary, arrOfWords, user_name);
                    System.out.println("What now?");
                    break;
+                   
                case "joke":
                    bot.make_a_joke();
                    break;
