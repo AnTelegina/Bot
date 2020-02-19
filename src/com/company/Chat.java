@@ -1,7 +1,6 @@
 package com.company;
 
-import java.text.SimpleDateFormat;
-import java.util.Date;
+import java.io.IOException;
 import java.util.HashMap;
 import java.util.Scanner;
 
@@ -64,7 +63,7 @@ class Chat {
     }
 
 
-    void chat(){
+    void chat() throws IOException {
         String answer;
         String user_name;
         ChatBot bot = new ChatBot();
@@ -86,7 +85,8 @@ class Chat {
                    System.out.println("play: to test you vocabulary" + "\n" +
                            "speak: to speak or ask about smth" + "\n" +
                            "stop: to quit the game" + "\n" +
-                           "show stat: to show your personal progress in Learning");
+                           "show stat: to show your personal progress in Learning" + "\n" +
+                           "joke: to read a joke in English");
                    break;
 
                case "show stat":
@@ -102,6 +102,9 @@ class Chat {
                case "play":
                    bot.playGame(dictionary, arrOfWords, user_name);
                    System.out.println("What now?");
+                   break;
+               case "joke":
+                   bot.make_a_joke();
                    break;
            }
 

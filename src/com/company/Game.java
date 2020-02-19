@@ -17,7 +17,7 @@ class Game {
             //String randomWord = arrOfWords.get(random.nextInt(arrOfWords.size()));
             String word = arrOfWords.get(i);  //на каждой итерации выводим последовательно слова из списка
             System.out.println(word);
-            answer = str.nextLine(); // читаем ответ от пользователя
+            answer = str.nextLine().toLowerCase(); // читаем ответ от пользователя
 
             if (answer.toLowerCase().equals("\\help")) {
                 System.out.println("stop: to quit the game");

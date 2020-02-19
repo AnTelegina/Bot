@@ -1,5 +1,6 @@
 package com.company;
 
+import java.io.IOException;
 import java.util.HashMap;
 
 public interface BotInterface {
@@ -9,4 +10,6 @@ public interface BotInterface {
               HashMap<String, String> patterns, HashMap<String, String> answers_by_patterns);
 
      void show_statistics(String user_name);
+
+     void make_a_joke() throws IOException;
 }
