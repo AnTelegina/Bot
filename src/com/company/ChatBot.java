@@ -1,16 +1,16 @@
 package com.company;
 
 import java.io.IOException;
-import java.util.HashMap;
+import java.util.Map;
 
 class ChatBot implements BotInterface {
     @Override
-    public void playGame(HashMap<String, String> dictionary, HashMap<Integer, String> arrOfWords, String user_name) {
+    public void playGame(Map<String, String> dictionary, Map<Integer, String> arrOfWords, String user_name) {
         Game.playGame(dictionary, arrOfWords, user_name);
     }
 
     @Override
-    public void speak(HashMap<Integer, String> phrases, HashMap<Integer, String> answers, HashMap<String, String> patterns, HashMap<String, String> answers_by_patterns) {
+    public void speak(Map<Integer, String> phrases, Map<Integer, String> answers, Map<String, String> patterns, Map<String, String> answers_by_patterns) {
         Speech.speak(phrases,answers,patterns,answers_by_patterns);
     }
 

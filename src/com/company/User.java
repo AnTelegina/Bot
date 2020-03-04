@@ -4,11 +4,12 @@ import java.io.*;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.HashMap;
+import java.util.Map;
 import java.util.Scanner;
 
 class User {
     private String user_name;
-    private HashMap<Integer, String> user_names = null;
+    private Map<Integer, String> user_names = null;
     private static Scanner str = new Scanner(System.in);
     private static String answer;
 

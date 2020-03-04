@@ -1,17 +1,17 @@
 package com.company;
 
 import java.io.IOException;
-import java.util.HashMap;
+import java.util.Map;
 import java.util.Scanner;
 
 class Chat {
     private Readable reader = new Read();
-    private HashMap<String,String> dictionary;
-    private HashMap<Integer,String> arrOfWords;
-    private HashMap<Integer, String> phrases;
-    private HashMap<Integer, String> answers;
-    private HashMap<String, String> patterns;
-    private HashMap<String, String> answers_by_patterns;
+    private Map<String,String> dictionary;
+    private Map<Integer,String> arrOfWords;
+    private Map<Integer, String> phrases;
+    private Map<Integer, String> answers;
+    private Map<String, String> patterns;
+    private Map<String, String> answers_by_patterns;
     private static Scanner str = new Scanner(System.in);
 
     {

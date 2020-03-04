@@ -1,11 +1,11 @@
 package com.company;
 
-import java.util.HashMap;
+import java.util.Map;
 
 public interface Readable {
-    HashMap<String,String> makeDictionaryOfWords(String fileName, String separator) throws Exception;
+    Map<String,String> makeDictionaryOfWords(String fileName, String separator) throws Exception;
 
-    HashMap<Integer,String> makeList(String fileName) throws Exception;
+    Map<Integer,String> makeList(String fileName) throws Exception;
 
-    HashMap<Integer,String> getArrayOfWords(String fileName, String separator) throws Exception;
+    Map<Integer,String> getArrayOfWords(String fileName, String separator) throws Exception;
 }

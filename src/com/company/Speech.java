@@ -1,6 +1,5 @@
 package com.company;
 
-import java.util.HashMap;
 import java.util.Map;
 import java.util.Random;
 import java.util.Scanner;
@@ -13,8 +12,8 @@ class Speech {
         match = false;
     }
 
-    static void speak(HashMap<Integer, String> phrases, HashMap<Integer, String> answers,
-                       HashMap<String, String> patterns, HashMap<String, String> answers_by_patterns){
+    static void speak(Map<Integer, String> phrases, Map<Integer, String> answers,
+                       Map<String, String> patterns, Map<String, String> answers_by_patterns){
         Random random = new Random();
 
         while (true) {
@@ -40,7 +39,7 @@ class Speech {
         }
     }
 
-    private static boolean find_pattern_in_dictionary(HashMap<String, String> patterns, HashMap<String, String> answers_by_patterns, String answer){
+    private static boolean find_pattern_in_dictionary(Map<String, String> patterns, Map<String, String> answers_by_patterns, String answer){
         String message = String.join(" ", answer.toLowerCase().split("[ {,|.}?]+")); // проверяем, можно провести соотвествие введенной фразы
         //какому-либо шаблону
         for (Map.Entry<String, String> o : patterns.entrySet()) {

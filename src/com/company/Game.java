@@ -1,13 +1,13 @@
 package com.company;
 
-import java.util.HashMap;
+import java.util.Map;
 import java.util.Scanner;
 
 class Game {
     private static int score = 0;
     private static Scanner str = new Scanner(System.in);
 
-    static void playGame(HashMap<String, String> dictionary, HashMap<Integer, String> arrOfWords, String user_name){
+    static void playGame(Map<String, String> dictionary, Map<Integer, String> arrOfWords, String user_name){
         String answer;
         User user = new User(user_name);
 

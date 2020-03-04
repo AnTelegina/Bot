@@ -1,13 +1,13 @@
 package com.company;
 
 import java.io.IOException;
-import java.util.HashMap;
+import java.util.Map;
 
 public interface BotInterface {
-     void playGame(HashMap<String, String> dictionary, HashMap<Integer, String> arrOfWords, String user_name);
+     void playGame(Map<String, String> dictionary, Map<Integer, String> arrOfWords, String user_name);
 
-     void speak(HashMap<Integer, String> phrases, HashMap<Integer, String> answers,
-              HashMap<String, String> patterns, HashMap<String, String> answers_by_patterns);
+     void speak(Map<Integer, String> phrases, Map<Integer, String> answers,
+                Map<String, String> patterns, Map<String, String> answers_by_patterns);
 
      void show_statistics(String user_name);
 
